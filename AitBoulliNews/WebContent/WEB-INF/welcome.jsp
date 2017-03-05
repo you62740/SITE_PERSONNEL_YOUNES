@@ -6,16 +6,18 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<title>M2i website</title>
-		<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
-		<link href="./css/welcome.css" rel="stylesheet">
+    	<title>Younes El Ouahmani WebSite</title>
+		<link href="./vues/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="./vues/font-awesome/css/font-awesome.min.css">
+		<link href="./vues/css/welcome.css" rel="stylesheet">
 	</head>
 
 	<body>
 		<div class="container-fluid">
 
+<!-- NAVIGATION -->
 			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">  
+		       <!-- Barre de navigation pour mobile et tablette -->
 		        <div class="navbar-header">   
 		          	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 			            <span class="icon-bar"></span>
@@ -24,25 +26,18 @@
 		          	</button>
 		          	<a class="navbar-brand" href="#"></a>
 		        </div>
+			<!-- Menu de Navigation -->
 
-		        <div class="collapse navbar-collapse">
-
+		        <div id="header" class="collapse navbar-collapse">
 			        <ul class="nav navbar-nav">
-			            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Présentation</a></li>
+			            <li><a href="#"><span class="glyphicon glyphicon-user"></span>Présentation</a></li>
 				        <li><a href="#"><span class="glyphicon glyphicon-briefcase"></span> Parcours </a></li>
 			            <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> Evènements</a></li>
-			            <li><a href="#"><span class="glyphicon glyphicon-comment"></span> Forum</a></li>
 			            <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
 			        </ul>
-
-			        <form class="navbar-form navbar-right inline-form" role="form">
-			            <div class="form-group">
-			              	<input type="search" class="input-sm form-control" placeholder="Recherche">
-			              	<button type="submit" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-search"></span> </button>
-			            </div>
-			        </form>
-
+			
 		        </div>
+		        
 		    </nav>
 
 
@@ -52,7 +47,8 @@
 				<div class="container">
 				<div class="row no-padding">
 					<div class="col-xs-12 col-sm-12 col-md-12">
-						<h1><span class="title1"><em>Développeur Back-End</em></span> <br/><span class="title2">Younès El Ouahmani</span></h1>
+					<jsp:useBean id="younes" class="com.aitboullinews.beans.Younes" scope="request" />
+						<h1><span class="title1"><em>${younes.emploi}</em></span> <br/><span class="title2">${younes.prenom} ${younes.nom}</span></h1>
 					</div>
 				</div>
 				</div>
@@ -97,7 +93,7 @@
 
 
     		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-			<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script> 
+			<script type="text/javascript" src="./vues/bootstrap/js/bootstrap.min.js"></script> 
 			
 	</body>
 

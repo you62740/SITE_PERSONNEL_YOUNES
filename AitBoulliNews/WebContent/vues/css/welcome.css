@@ -8,6 +8,7 @@ body {
 	margin: 0;
 }
 
+
 header {
 	background-color: #234052;
 	background-image: url("../images/computer1bis.jpg");
@@ -99,10 +100,7 @@ p.copyright {
 		font-size:23px;
 		text-align:center;
 	
-	}
-	
-	
-	
+	}	
 }
 	
 
@@ -126,7 +124,5 @@ p.copyright {
   		max-height: 600px;
   	}
   	
-  	.form-group {
-	padding: 10px 10px 10px 0;
-}
+  	
 }
