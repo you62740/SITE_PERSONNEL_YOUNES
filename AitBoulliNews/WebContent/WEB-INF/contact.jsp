@@ -9,6 +9,7 @@
     	<title>Younes El Ouahmani WebSite</title>
 		<link href="./vues/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="./vues/font-awesome/css/font-awesome.min.css">
+		
 	</head>
 
 	<body>
@@ -40,47 +41,59 @@
 		    </nav>
 			</header>
 			
-			<h1>Formulaire de Contact</h1>
+			
+			<br>
+			<br>
+			<br>
 			<br>
 			<br>
 			
 
 
-
-        <form method="post" action="inscription">
+        <form method="post" action="contact">
+		    <p>Formulaire de Contact</p>
 
             <fieldset>
 
                 <legend>Contact</legend>
-
                 <p>Vous pouvez envoyer un message via ce formulaire.</p>
 
-				<label for="nom">Nom</label>
+				<table>
+				<tr >
+				<td><label for="nom">Nom</label></td>
+                <td><input type="text" id="nom" name="nom" value="" size="20" maxlength="20" /></td>
+                <td class="erreur">${erreurs['nom']}</td>
+                </tr>
+                
+                <tr >
+                <td><label for="prenom">Prénom</label></td>
+                <td><input type="text" id="prenom" name="prenom" value="" size="20" maxlength="20" /></td>
+                <td class="erreur">${erreurs['prenom']}</td>
+                </tr>
+                
+				<tr >	
+                <td><label for="email">Adresse email<span class="requis">*</span></label></td>
+                <td><input type="text" id="email" name="email" value="" size="20" maxlength="60" /></td>
+               <td class="erreur">${erreurs['email']}</td>
+                </tr>
+                
+                <tr >
+                <td><label for="message">Message<span class="requis">*</span></label></td>
+               <td> <textarea rows="4" cols="50" id="message" name="message"></textarea></td>
+               <td class="erreur">${erreurs['message']}</td> 
+                </tr>
 
-                <input type="text" id="nom" name="nom" value="" size="20" maxlength="20" />
-
-                <br/>
-                <label for="prenom">Prénom</label>
-
-                <input type="text" id="prenom" name="prenom" value="" size="20" maxlength="20" />
-
-                <br/>
-
-                <label for="email">Adresse email<span class="requis">*</span></label>
-
-                <input type="text" id="email" name="email" value="" size="20" maxlength="60" />
-
-                <br/>
-
-                <input type="submit" value="EnvoiMessage" class="sansLabel" />
-
-                <br/>
+				<tr >
+                <td><input type="submit" value="EnvoiMessage" class="sansLabel" /></td>
+                </tr>
+				</table>
+                
 
             </fieldset>
 
         </form>
 
-  
+
 			
 		</div>
 		</body>
