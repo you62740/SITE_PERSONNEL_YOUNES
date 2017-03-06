@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -61,30 +62,35 @@
 				<table>
 				<tr >
 				<td><label for="nom">Nom</label></td>
-                <td><input type="text" id="nom" name="nom" value="" size="20" maxlength="20" /></td>
+                <td><input type="text" id="nom" name="nom" value="<c:out value="${param.nom}"/>" size="20" maxlength="20" /></td>
                 <td class="erreur">${erreurs['nom']}</td>
                 </tr>
                 
                 <tr >
                 <td><label for="prenom">Prénom</label></td>
-                <td><input type="text" id="prenom" name="prenom" value="" size="20" maxlength="20" /></td>
+                <td><input type="text" id="prenom" name="prenom" value="<c:out value="${param.prenom}"/>" size="20" maxlength="20" /></td>
                 <td class="erreur">${erreurs['prenom']}</td>
                 </tr>
                 
 				<tr >	
                 <td><label for="email">Adresse email<span class="requis">*</span></label></td>
-                <td><input type="text" id="email" name="email" value="" size="20" maxlength="60" /></td>
+                <td><input type="text" id="email" name="email" value="<c:out value="${param.email}"/>" size="20" maxlength="60" /></td>
                <td class="erreur">${erreurs['email']}</td>
                 </tr>
                 
                 <tr >
                 <td><label for="message">Message<span class="requis">*</span></label></td>
-               <td> <textarea rows="4" cols="50" id="message" name="message"></textarea></td>
+               <td> <textarea rows="4" cols="50" id="message" name="message"><c:out value="${param.message}"/></textarea></td>
                <td class="erreur">${erreurs['message']}</td> 
                 </tr>
 
 				<tr >
-                <td><input type="submit" value="EnvoiMessage" class="sansLabel" /></td>
+                <td><input type="submit" value="Envoyer" class="sansLabel" /></td>
+       
+                </tr>
+                
+                <tr>
+                <td><p>${resultat}</p></td>
                 </tr>
 				</table>
                 
@@ -92,6 +98,7 @@
             </fieldset>
 
         </form>
+       
 
 
 			

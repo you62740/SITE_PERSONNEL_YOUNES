@@ -22,7 +22,7 @@ public class Contact extends HttpServlet {
 	public static final String CHAMP_EMAIL = "email";
     public static final String CHAMP_MESSAGE = "message";
 	private static final String ATT_ERREURS = "erreurs";
-	private static final String ATT_RESULTAT = "résultats";
+	private static final String ATT_RESULTAT = "resultat";
 	private static final String VUE = "/WEB-INF/contact.jsp";
 	
 	/**
