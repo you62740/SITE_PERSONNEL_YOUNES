@@ -8,21 +8,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.aitboullinews.beans.VisiteurBean;
-import com.aitboullinews.forms.VisiteurForm;
+import com.aitboullinews.beans.Utilisateur;
+import com.aitboullinews.forms.InscriptionForm;
 
-@WebServlet("/Visiteur")
-public class Visiteur extends HttpServlet {
+
+
+@WebServlet("/Inscription")
+public class Inscription extends HttpServlet {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	
+	
 	/**
 	 * 
 	 */
-	public Visiteur() {
+	public Inscription() {
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -32,31 +35,24 @@ public class Visiteur extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		this.getServletContext().getRequestDispatcher("/WEB-INF/visiteur.jsp").forward(request, response);	}
+		this.getServletContext().getRequestDispatcher( "/WEB-INF/inscription.jsp" ).forward(request, response);	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		/*instanciation objet VisiteurForm*/
 		
-		VisiteurForm form=new VisiteurForm();
+		InscriptionForm form=new InscriptionForm();
+		Utilisateur utilisateur = form.inscrireUtilisateur(request);
+		request.setAttribute("form", form);
+		request.setAttribute("utilisateur", utilisateur);
+
 		
-		/* Appel au traitement d ela requête, et récupération du bean en résultant */
-
-        VisiteurBean visiteur = form.inscrireVisiteur( request );
+		this.getServletContext().getRequestDispatcher( "/WEB-INF/inscription.jsp" ).forward(request, response);	
 		
-        /* Stockage du formulaire et du bean dans l'objet request */
+	}
 
-        request.setAttribute( "form", form );
-
-        request.setAttribute( "visiteur", visiteur );
-
-        
-
-        this.getServletContext().getRequestDispatcher( "/WEB-INF/visiteur.jsp" ).forward( request, response );
-
-}
+    
+		
 
 }

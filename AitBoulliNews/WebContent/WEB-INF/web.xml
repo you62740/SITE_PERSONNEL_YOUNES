@@ -22,14 +22,16 @@
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>Visiteur</servlet-name>
-		<servlet-class>com.aitboullinews.servlets.Visiteur</servlet-class>
+		<servlet-name>Inscription</servlet-name>
+		<servlet-class>com.aitboullinews.servlets.Inscription</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>Visiteur</servlet-name>
-		<url-pattern>/visiteur</url-pattern>
+		<servlet-name>Inscription</servlet-name>
+		<url-pattern>/inscription</url-pattern>
 	</servlet-mapping>
+	
+	
 	
 	
 	
