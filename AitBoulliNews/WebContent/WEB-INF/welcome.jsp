@@ -30,12 +30,12 @@
 
 		        <div id="header" class="collapse navbar-collapse">
 			        <ul class="nav navbar-nav">
-			            <li><a href="#"><span class="glyphicon glyphicon-user"></span>Présentation</a></li>
+			            <li><a href="#"><span class=" glyphicon glyphicon-home"></span>Présentation</a></li>
 				        <li><a href="#"><span class="glyphicon glyphicon-briefcase"></span> Parcours </a></li>
 			            <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> Evènements</a></li>
+			            <li><a href="visiteur"><span class="glyphicon glyphicon-user"></span> Visiteur</a></li>
 			            <li><a href="contact"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
 			        </ul>
-			
 		        </div>
 		        
 		    </nav>

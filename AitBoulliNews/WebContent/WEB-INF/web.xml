@@ -21,4 +21,16 @@
 		<url-pattern>/contact</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>Visiteur</servlet-name>
+		<servlet-class>com.aitboullinews.servlets.Visiteur</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Visiteur</servlet-name>
+		<url-pattern>/visiteur</url-pattern>
+	</servlet-mapping>
+	
+	
+	
 </web-app>
