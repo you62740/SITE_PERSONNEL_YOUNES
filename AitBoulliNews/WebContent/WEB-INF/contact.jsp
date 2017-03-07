@@ -62,26 +62,26 @@
 				<table>
 				<tr >
 				<td><label for="nom">Nom</label></td>
-                <td><input type="text" id="nom" name="nom" value="<c:out value="${param.nom}"/>" size="20" maxlength="20" /></td>
-                <td class="erreur">${erreurs['nom']}</td>
+                <td><input type="text" id="nom" name="nom" value="<c:out value="${contact.nom}"/>" size="20" maxlength="20" /></td>
+                <td class="erreur">${form.erreurs['nom']}</td>
                 </tr>
                 
                 <tr >
                 <td><label for="prenom">Prénom</label></td>
-                <td><input type="text" id="prenom" name="prenom" value="<c:out value="${param.prenom}"/>" size="20" maxlength="20" /></td>
-                <td class="erreur">${erreurs['prenom']}</td>
+                <td><input type="text" id="prenom" name="prenom" value="<c:out value="${contact.prenom}"/>" size="20" maxlength="20" /></td>
+                <td class="erreur">${form.erreurs['prenom']}</td>
                 </tr>
                 
 				<tr >	
                 <td><label for="email">Adresse email<span class="requis">*</span></label></td>
-                <td><input type="text" id="email" name="email" value="<c:out value="${param.email}"/>" size="20" maxlength="60" /></td>
-               <td class="erreur">${erreurs['email']}</td>
+                <td><input type="text" id="email" name="email" value="<c:out value="${contact.email}"/>" size="20" maxlength="60" /></td>
+               <td class="erreur">${form.erreurs['email']}</td>
                 </tr>
                 
                 <tr >
                 <td><label for="message">Message<span class="requis">*</span></label></td>
-               <td> <textarea rows="4" cols="50" id="message" name="message"><c:out value="${param.message}"/></textarea></td>
-               <td class="erreur">${erreurs['message']}</td> 
+               <td> <textarea rows="4" cols="50" id="message" name="message"><c:out value="${contact.message}"/></textarea></td>
+               <td class="erreur">${form.erreurs['message']}</td> 
                 </tr>
 
 				<tr >
@@ -90,7 +90,7 @@
                 </tr>
                 
                 <tr>
-                <td><p>${resultat}</p></td>
+                <td><p>${form.resultat}</p></td>
                 </tr>
 				</table>
                 
