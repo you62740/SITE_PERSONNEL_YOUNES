@@ -95,10 +95,12 @@ public class ContactForm {
 	/*4**/
 	
 	private void validationMessage(String message) throws Exception{
-		if ( message != null && message.trim().length() < 10 ) {
+		if (message != null && message.trim().length() < 10) {
 
 	        throw new Exception( "Le Message doit contenir au moins 10 caractères." );
 	}
+		else if (message == null){
+	        throw new Exception( "Veuillez saisir un message!" );}
 	}
 
 
@@ -120,9 +122,14 @@ public class ContactForm {
 
 
 	private void validationPrenom(String prenom) throws Exception{
-		if ( prenom != null && prenom.trim().length() < 3 ) {
+		if ( prenom != null && prenom.trim().length() < 3) {
 
 	        throw new Exception( "Le prénom d'utilisateur doit contenir au moins 3 caractères." );}
+		
+		else if (prenom == null){
+	        throw new Exception( "Veuillez saisir un prénom!" );}
+
+		
 	}
 
 
@@ -131,6 +138,8 @@ public class ContactForm {
 
 	        throw new Exception( "Le nom d'utilisateur doit contenir au moins 3 caractères." );
 	}
+		else if (nom == null){
+	        throw new Exception( "Veuillez saisir un nom!" );}
 
 	}
 	

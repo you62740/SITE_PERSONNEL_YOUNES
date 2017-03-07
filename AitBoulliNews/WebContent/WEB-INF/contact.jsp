@@ -73,13 +73,13 @@
                 </tr>
                 
 				<tr >	
-                <td><label for="email">Adresse email<span class="requis">*</span></label></td>
+                <td><label for="email">Adresse email</span></label></td>
                 <td><input type="text" id="email" name="email" value="<c:out value="${contact.email}"/>" size="20" maxlength="60" /></td>
                <td class="erreur">${form.erreurs['email']}</td>
                 </tr>
                 
                 <tr >
-                <td><label for="message">Message<span class="requis">*</span></label></td>
+                <td><label for="message">Message</span></label></td>
                <td> <textarea rows="4" cols="50" id="message" name="message"><c:out value="${contact.message}"/></textarea></td>
                <td class="erreur">${form.erreurs['message']}</td> 
                 </tr>
