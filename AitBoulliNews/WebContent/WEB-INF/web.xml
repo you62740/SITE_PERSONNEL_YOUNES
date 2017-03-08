@@ -31,6 +31,16 @@
 		<url-pattern>/inscription</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>Connexion</servlet-name>
+		<servlet-class>com.aitboullinews.servlets.Connexion</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Connexion</servlet-name>
+		<url-pattern>/connexion</url-pattern>
+	</servlet-mapping>
+	
 	
 	
 	
